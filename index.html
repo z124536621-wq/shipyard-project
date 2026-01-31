@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Ship - Shipyard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card">
+            <h1 class="title">Submit Ship</h1>
+            <p class="subtitle">Prove your work. Build your reputation.</p>
+
+            <form id="shipForm" class="ship-form">
+                <div class="form-group">
+                    <label for="shipTitle">Ship Title</label>
+                    <input
+                        type="text"
+                        id="shipTitle"
+                        name="shipTitle"
+                        placeholder="What did you build?"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description (optional)</label>
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="4"
+                        placeholder="Describe what you built..."
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="proofUrl">Proof URL</label>
+                    <input
+                        type="url"
+                        id="proofUrl"
+                        name="proofUrl"
+                        placeholder="https://github.com/you/project"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="proofType">Proof Type</label>
+                    <select id="proofType" name="proofType" required>
+                        <option value="github">GitHub</option>
+                        <option value="gitlab">GitLab</option>
+                        <option value="bitbucket">Bitbucket</option>
+                        <option value="personal">Personal Website</option>
+                        <option value="demo">Live Demo</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Ship</button>
+            </form>
+
+            <div id="successMessage" class="success-message hidden">
+                <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <p>Ship submitted successfully!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
